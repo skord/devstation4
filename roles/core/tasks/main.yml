@@ -1,0 +1,2 @@
+- name: Upgrade Base OS (Takes a few)
+  command: yum -y distribution-synchronization

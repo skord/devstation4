@@ -1,0 +1,21 @@
+- name: install dev package and python deps
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - '@Development Tools'
+    - 'python-devel'
+    - 'python-setuptools'
+    - 'python-pycurl'
+- name: Install Pip
+  easy_install:
+    name: pip
+- name: pip install ansible and deps
+  pip:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - 'docker-py'
+    - 'pycrypto'
+    - 'ansible'
+    - 'dopy'

@@ -1,0 +1,9 @@
+- name: Setup Roles
+  hosts: devstations
+  user: root
+  roles:
+    - role: core
+    - role: ansible
+    - role: docker
+    - role: remote_users
+    - role: desktop

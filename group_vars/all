@@ -1,0 +1,6 @@
+---
+developers:
+  - username: 'mike'
+    comment: 'Mike Danko'
+    public_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcq6FuFCjLt5OHMz5QJCJLDF1KYrLtJ5XMGNQiHcBkyxUexjXvNOH/S2F2Nxn+GV0RthbRyJBjAlpxYboVk5IgSy7tfSgwAR5FU94VF77B42354K3oxYEcvcaYwVoSf5/uShyGzwUYHM0pUFZO5pBonReq83T2GhFIrwyUGgwFWRSFMll4/d+u8Vp4TJktTCkCBcbBwUW1FSEvzgJc1ESPdKOt1DQIrykbBhAoyIykFhQQwrx6hfseKCE4Qg0Kq3bQYCAYwSnOkN/QGP2yOhRKBNYTq9UloZy3UmTKoGnMbQ6nIqGoxg8b4Ww2+6K79SQt8rDhOVapZR96VLPPtDy5 mike@l4m3.com'
+    state: 'present'

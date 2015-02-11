@@ -1,0 +1,22 @@
+- name: Create Developer Accounts
+  user:
+    name: "{{ item.username }}"
+    comment: "{{ item.comment }}"
+    state: "{{ item.state }}"
+    shell: "/bin/bash"
+    groups: dockerroot,wheel
+    append: yes
+  with_items: developers
+
+- name: Copy public keys for developers
+  authorized_key:
+    key: "{{ item.public_key }}"
+    user: "{{ item.username }}"
+  with_items: developers
+
+- name: Make wheel group members have nopasswd sudo
+  lineinfile:
+    regexp: '^%wheel'
+    line: '%sudo	ALL=(ALL) NOPASSWD: ALL'
+    dest: "/etc/sudoers"
+    validate: 'visudo -cf %s'
